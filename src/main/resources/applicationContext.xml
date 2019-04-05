@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 启用注解注入 -->
+    <context:annotation-config/>
+    <!-- 启用自动扫描 -->
+    <context:component-scan base-package="com.kk.aop.an"/>
+    <!-- 声明spring对@AspectJ的支持 -->
+    <aop:aspectj-autoproxy/>
+
+    <!--<bean id="helloWorldImpl1" class="com.kk.aop.HelloWorldImpl1"/>-->
+    <!--<bean id="helloWorldImpl2" class="com.kk.aop.HelloWorldImpl2"/>-->
+    <!--<bean id="timeHandler" class="com.kk.aop.TimeHandler"/>-->
+
+    <!--<aop:config>-->
+        <!--<aop:aspect id="time" ref="timeHandler">-->
+            <!--<aop:pointcut id="addAllMethod" expression="execution(* com.kk.aop.HelloWorld.*(..))"/>-->
+            <!--<aop:before method="printTime" pointcut-ref="addAllMethod"/>-->
+            <!--<aop:after method="printTime" pointcut-ref="addAllMethod"/>-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+    <!--<aop:config>-->
+        <!--<aop:aspect id="time" ref="timeHandler">-->
+            <!--<aop:pointcut id="addAllMethod" expression="execution(* com.kk.aop.HelloWorldImpl1.*(..))"/>-->
+            <!--<aop:before method="printTime" pointcut-ref="addAllMethod"/>-->
+            <!--<aop:after method="printTime" pointcut-ref="addAllMethod"/>-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+</beans>
